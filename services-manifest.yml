@@ -1,0 +1,14 @@
+# Generated services-manifest.yml based on template version 0.1.0
+# appName = risk-management
+
+# contains Cloud Foundry services that are required for project and derived from the service binding in package.json using cds.requires config
+---
+create-services:
+# ------------------------------------------------------------
+  - name:   risk-management-xsuaa
+    broker: xsuaa
+    plan: "broker"
+# ------------------------------------------------------------
+  - name:   risk-management-db
+    broker: hana  # 'hanatrial' on trial landscapes
+    plan: "hdi-shared"
